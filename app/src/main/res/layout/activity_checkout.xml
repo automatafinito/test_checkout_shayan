@@ -12,6 +12,16 @@
         android:layout_margin="@dimen/padding_small"
         android:orientation="vertical">
 
+        <!-- Add this ImageView to display the logo -->
+        <ImageView
+            android:id="@+id/appLogoImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/logo_image" />
+
+        <!-- TextView for Item Name -->
         <TextView
             android:id="@+id/text_item_name"
             style="@android:style/TextAppearance.Large"
@@ -19,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/padding_small" />
 
+        <!-- Horizontal LinearLayout for T-Shirts -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,48 +37,121 @@
             android:minHeight="300dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/image_item_image"
+            <!-- T-Shirt 1 -->
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:adjustViewBounds="true" />
+                android:orientation="vertical"
+                android:layout_marginRight="16dp">
 
-            <TextView
-                android:id="@+id/text_item_price"
+                <!-- T-Shirt 1 Image -->
+                <ImageView
+                    android:id="@+id/tshirt1ImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/tshirt1_image" />
+
+                <!-- T-Shirt 1 Name -->
+                <TextView
+                    android:id="@+id/tshirt1NameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="T-Shirt 1"
+                    android:textSize="18sp" />
+
+                <!-- Buy Button for T-Shirt 1 -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_buy1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/buy_button_min_width"
+                    android:text="Buy 1" />
+            </LinearLayout>
+
+            <!-- T-Shirt 2 -->
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                android:layout_marginRight="16dp">
 
+                <!-- T-Shirt 2 Image -->
+                <ImageView
+                    android:id="@+id/tshirt2ImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/tshirt2_image" />
+
+                <!-- T-Shirt 2 Name -->
+                <TextView
+                    android:id="@+id/tshirt2NameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="T-Shirt 2"
+                    android:textSize="18sp" />
+
+                <!-- Buy Button for T-Shirt 2 -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_buy2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/buy_button_min_width"
+                    android:text="Buy 2" />
+            </LinearLayout>
+
+            <!-- T-Shirt 3 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginRight="16dp">
+
+                <!-- T-Shirt 3 Image -->
+                <ImageView
+                    android:id="@+id/tshirt3ImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/tshirt3_image" />
+
+                <!-- T-Shirt 3 Name -->
+                <TextView
+                    android:id="@+id/tshirt3NameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="T-Shirt 3"
+                    android:textSize="18sp" />
+
+                <!-- Buy Button for T-Shirt 3 -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_buy3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/buy_button_min_width"
+                    android:text="Buy 3" />
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:orientation="vertical"
+        <!-- Additional Layouts or Views as needed -->
+        <Button
+            android:id="@+id/button_giropay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/margin_xlarge">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_cvv_tokenization"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cvv_tokenization_label"
-                android:minWidth="@dimen/buy_button_min_width"/>
-
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_marginTop="@dimen/margin_xlarge"
-                android:id="@+id/button_buy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/button_buy"
-                android:minWidth="@dimen/buy_button_min_width"/>
-        </LinearLayout>
+            android:text="Pay with Giropay" />
 
     </LinearLayout>
+
+
 
 </ScrollView>
